@@ -21,6 +21,10 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Todo backend is running' });
+});
+
 app.use('/api/todos', todoRouter);
 
 app.use((err, req, res, next) => {
